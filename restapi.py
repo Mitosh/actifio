@@ -20,12 +20,12 @@ print(sessionid)
 
 
 
-def get_application():
+def get_application(ses):
     api_url ="https://10.30.10.3/actifio/application?sort=appname%3Aasc&filter=hostname%3A%3D%7Cmyhost&limit=50&offset=0"
-    headers = {"Authorization" : "actifio b35bcc57-1245-4feb-85fe-b3b6991dc905" }
+    headers = {"Authorization" : "actifio {ses}" }
     response = requests.get(api_url, headers=headers, verify=False)
     get_test= response.json()
     return get_test
 
-get_apl = get_application()
+get_apl = get_application(sessionid)
 print(get_apl)
