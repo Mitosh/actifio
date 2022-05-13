@@ -9,7 +9,7 @@ def get_session_id():
     headers1 =  {"Authorization" : "Basic YWRtaW46T3JhbmdlMTIzIQ=="}
     response = requests.post(api_url, headers=headers1, verify=False)
     json_test= response.json()
-    return json_test
+    return json_test["session_id"]
 
 
 #return json_test["sessionid"]
