@@ -5,8 +5,8 @@ import json
 
 # a function to get the sesion ID form ActifioSky Api
 def get_session_id():
-    api_url = "https://34.116.223.174/actifio/api/login?vendorkey=e4577-jl9r0-h84wi-z96is-z75v"
-    headers1 =  {"Authorization" : "Basic YWRtaW46YU9nbFdHTjd2MzNpUA=="}
+    api_url = "https://10.30.10.3/actifio/session"
+    headers1 =  {"Authorization" : "Basic YWRtaW46T3JhbmdlMTIzIQ=="}
     response = requests.post(api_url, headers=headers1, verify=False)
     json_test= response.json()
     return json_test["sessionid"]
@@ -20,7 +20,7 @@ print(sessionid)
 api_url1 = "https://34.116.223.174/actifio/api/info/lshost"
 headers2 =  {"Authorization" : "Actifio "+ sessionid }
 response1 = requests.get(api_url1, headers=headers2, verify=False)
-print(response1.text)
+#print(response1.text)
 
 #format the json
 json_object = json.loads(response1.text)
@@ -40,4 +40,4 @@ print(json_formatted_str)
 
 #json_test= response.json()
 
-#print(json_test["sessionid"])
+d#print(json_test["sessionid"])
