@@ -24,6 +24,7 @@ def get_application(ses):
     api_url ="https://10.30.10.3/actifio/application?sort=appname%3Aasc&filter=hostname%3A%3D%7Cmyhost&limit=50&offset=0"
     headers = {"Authorization" : "actifio {ses}" }
     response = requests.get(api_url, headers=headers, verify=False)
+    print(headers)
     get_test= response.json()
     return get_test
 
