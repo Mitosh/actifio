@@ -42,4 +42,4 @@ print(sessionid)
 
 #json_test= response.json()
 
-d#print(json_test["sessionid"])
+#print(json_test["sessionid"])
